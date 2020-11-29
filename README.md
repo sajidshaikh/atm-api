@@ -43,10 +43,9 @@ We have Implement the API’s for the following functionalities -
 
 #1. Create accounts:
 To Create new Account. 
-##[URL]
-(http://localhost:8762/atm/api/createAccount)
 
-# Request Method:
+
+# Request Method And URL:
     [POST] http://localhost:8762/atm/api/createAccount
   
 #Request Payload:  
@@ -68,10 +67,8 @@ To Create new Account.
   	
 #2. Cash deposits:  
 To deposit money into account.  
-##[URL]  
-(http://localhost:8762/atm/api/deposit)
 
-# Request Method:
+# Request Method And URL:
     [POST] http://localhost:8762/atm/api/deposit
   
 #Request Payload:  
@@ -96,10 +93,8 @@ To deposit money into account.
 #3. cash withdrawals:  
 To cash withdrawls from ATM.  
 #Amount will be accepted in multiplication of 100 only. And max cash transacation limit is >10000  
-#[URL]
-(http://localhost:8762/atm/api/withdrawals)
 
-# Request Method:
+# Request Method And URL:
     [POST] http://localhost:8762/atm/api/withdrawals
   
 #Request Payload:  
@@ -125,10 +120,8 @@ To cash withdrawls from ATM.
 }  
 #4. Balance enquiry:  
 To check the current balance.  
-#[URL]
-http://localhost:8762/atm/api/balanceEnquiry?customerId=2
 
-# Request Method:
+# Request Method And URL:
     [GET] http://localhost:8762/atm/api/balanceEnquiry?customerId=2
   
 #Request Payload:  
