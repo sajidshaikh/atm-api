@@ -44,7 +44,7 @@ We have Implement the API’s for the following functionalities -
 #1. Create accounts:
 To Create new Account. 
 ##[URL]
-[POST](http://localhost:8762/atm/api/createAccount)
+(http://localhost:8762/atm/api/createAccount)
 
 # Request Method:
     [POST] http://localhost:8762/atm/api/createAccount
@@ -69,7 +69,7 @@ To Create new Account.
 #2. Cash deposits:
 To deposit money into account.
 ##[URL]
-[POST](http://localhost:8762/atm/api/deposit)
+(http://localhost:8762/atm/api/deposit)
 
 # Request Method:
     [POST] http://localhost:8762/atm/api/deposit
