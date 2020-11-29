@@ -49,100 +49,100 @@ To Create new Account.
 # Request Method:
     [POST] http://localhost:8762/atm/api/createAccount
   
-#Request Payload:
-  {
-    "customerName":"Sajid Shaikh",
-    "email":"sajid.shaikh91@gmail.com",
-    "pin":"TEST",
-    "amount":47385.45,
-    "accountType":"Savings Account"
- }
-#Response Payload:
-  {
-    "success": true,
-    "message": "Success",
-    "statusCode": 201,
-    "data": 3
-  }
+#Request Payload:  
+  {  
+    "customerName":"Sajid Shaikh",  
+    "email":"sajid.shaikh91@gmail.com",  
+    "pin":"TEST",  
+    "amount":47385.45,  
+    "accountType":"Savings Account"  
+ }  
+#Response Payload:  
+  {  
+    "success": true,  
+    "message": "Success",  
+    "statusCode": 201,  
+    "data": 3  
+  }  
   
   	
-#2. Cash deposits:
-To deposit money into account.
-##[URL]
+#2. Cash deposits:  
+To deposit money into account.  
+##[URL]  
 (http://localhost:8762/atm/api/deposit)
 
 # Request Method:
     [POST] http://localhost:8762/atm/api/deposit
   
-#Request Payload:
-{
-    "customerId":2,
-    "amount":12200,
-    "denomination":{
-        "100":2,
-        "500":4,
-        "2000":5
-    }
-}
-#Response Payload:
- {
-    "success": true,
-    "message": "₹ 12200.0 Successfully deposited.!",
-    "statusCode": 201,
-    "data": null
-}
+#Request Payload:  
+{  
+    "customerId":2,  
+    "amount":12200,  
+    "denomination":{  
+        "100":2,  
+        "500":4,  
+        "2000":5  
+    }  
+}  
+#Response Payload:  
+ {  
+    "success": true,  
+    "message": "₹ 12200.0 Successfully deposited.!",  
+    "statusCode": 201,  
+    "data": null  
+}  
 
 	
-#3. cash withdrawals:
-To cash withdrawls from ATM.
-#Amount will be accepted in multiplication of 100 only. And max cash transacation limit is >10000
+#3. cash withdrawals:  
+To cash withdrawls from ATM.  
+#Amount will be accepted in multiplication of 100 only. And max cash transacation limit is >10000  
 #[URL]
 (http://localhost:8762/atm/api/withdrawals)
 
 # Request Method:
     [POST] http://localhost:8762/atm/api/withdrawals
   
-#Request Payload:
-{
-    "customerId":2,
-    "pin":"test12",
-    "amount":12200
-}
-#Response Payload:
-{
-    "success": true,
-    "message": "₹ 12200 Successfully withdrawal.!",
-    "statusCode": 200,
-    "data": {
-        "availableBalance": "₹ 6085.45",
-        "currentTime": "2020-11-29T11:42:15.542",
-        "denominationMap": {
-            "₹ 500": 4,
-            "₹ 100": 2,
-            "₹ 2000": 5
-        }
-    }
-}
-#4. Balance enquiry:
-To check the current balance.
+#Request Payload:  
+{  
+    "customerId":2,  
+    "pin":"test12",  
+    "amount":12200  
+}  
+#Response Payload:  
+{  
+    "success": true,  
+    "message": "₹ 12200 Successfully withdrawal.!",  
+    "statusCode": 200,  
+    "data": {  
+        "availableBalance": "₹ 6085.45",  
+        "currentTime": "2020-11-29T11:42:15.542",  
+        "denominationMap": {  
+            "₹ 500": 4,  
+            "₹ 100": 2,  
+            "₹ 2000": 5  
+        }  
+    }  
+}  
+#4. Balance enquiry:  
+To check the current balance.  
 #[URL]
 http://localhost:8762/atm/api/balanceEnquiry?customerId=2
 
 # Request Method:
     [GET] http://localhost:8762/atm/api/balanceEnquiry?customerId=2
   
-#Request Payload:
-{
-   PARAM: customerId=2
-}
-#Response Payload:
-{
-    "success": true,
-    "message": "Success",
-    "statusCode": 200,
-    "data": {
-        "availableBalance": "₹ 18285.45",
-        "currentTime": "2020-11-29T11:41:32.697",
-        "denominationMap": null
-    }
-}
+#Request Payload:  
+{  
+   PARAM: customerId=2  
+}  
+#Response Payload:  
+{  
+    "success": true,  
+    "message": "Success",  
+    "statusCode": 200,  
+    "data": {  
+        "availableBalance": "₹ 18285.45",  
+        "currentTime": "2020-11-29T11:41:32.697",  
+        "denominationMap": null  
+    }  
+}  
