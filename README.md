@@ -1,7 +1,6 @@
 # atm-api
 
-# Read Me First
-The following was discovered as part of building this project:
+
 
 
 # Getting Started
@@ -47,10 +46,10 @@ To Create new Account.
 ##[URL]
 [POST](http://localhost:8762/atm/api/createAccount)
 
-## Request Method:
-    [POST]
+# Request Method:
+    [POST] http://localhost:8762/atm/api/createAccount
   
-##Request Payload:
+#Request Payload:
   {
     "customerName":"Sajid Shaikh",
     "email":"sajid.shaikh91@gmail.com",
@@ -58,7 +57,7 @@ To Create new Account.
     "amount":47385.45,
     "accountType":"Savings Account"
  }
-##Response Payload:
+#Response Payload:
   {
     "success": true,
     "message": "Success",
@@ -72,10 +71,10 @@ To deposit money into account.
 ##[URL]
 [POST](http://localhost:8762/atm/api/deposit)
 
-## Request Method:
-    [POST]
+# Request Method:
+    [POST] http://localhost:8762/atm/api/deposit
   
-##Request Payload:
+#Request Payload:
 {
     "customerId":2,
     "amount":12200,
@@ -85,7 +84,7 @@ To deposit money into account.
         "2000":5
     }
 }
-##Response Payload:
+#Response Payload:
  {
     "success": true,
     "message": "₹ 12200.0 Successfully deposited.!",
@@ -97,19 +96,19 @@ To deposit money into account.
 #3. cash withdrawals:
 To cash withdrawls from ATM.
 #Amount will be accepted in multiplication of 100 only. And max cash transacation limit is >10000
-##[URL]
-[POST](http://localhost:8762/atm/api/withdrawals)
+#[URL]
+(http://localhost:8762/atm/api/withdrawals)
 
-## Request Method:
+# Request Method:
     [POST]
   
-##Request Payload:
+#Request Payload:
 {
     "customerId":2,
     "pin":"test12",
     "amount":12200
 }
-##Response Payload:
+#Response Payload:
 {
     "success": true,
     "message": "₹ 12200 Successfully withdrawal.!",
@@ -126,17 +125,17 @@ To cash withdrawls from ATM.
 }
 #4. Balance enquiry:
 To check the current balance.
-##[URL]
-[GET](http://localhost:8762/atm/api/balanceEnquiry?customerId=2)
+#[URL]
+http://localhost:8762/atm/api/balanceEnquiry?customerId=2
 
-## Request Method:
+# Request Method:
     [GET]
   
-##Request Payload:
+#Request Payload:
 {
    PARAM: customerId=2
 }
-##Response Payload:
+#Response Payload:
 {
     "success": true,
     "message": "Success",
