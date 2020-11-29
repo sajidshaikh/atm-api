@@ -100,7 +100,7 @@ To cash withdrawls from ATM.
 (http://localhost:8762/atm/api/withdrawals)
 
 # Request Method:
-    [POST]
+    [POST] http://localhost:8762/atm/api/withdrawals
   
 #Request Payload:
 {
@@ -129,7 +129,7 @@ To check the current balance.
 http://localhost:8762/atm/api/balanceEnquiry?customerId=2
 
 # Request Method:
-    [GET]
+    [GET] http://localhost:8762/atm/api/balanceEnquiry?customerId=2
   
 #Request Payload:
 {
