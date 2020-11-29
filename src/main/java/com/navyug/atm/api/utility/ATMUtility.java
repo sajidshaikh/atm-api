@@ -81,7 +81,7 @@ public class ATMUtility {
 	public static List<ATMStatesEntity> generateATMStatesEntityRequest(ATMUtilityRequest atmUtilityRequest)throws Exception{
 		List<ATMStatesEntity> atmStatesEntities=null;
 		ATMRequest atmRequest=atmUtilityRequest.getAtmRequest();
-		atmStatesEntities=(List<ATMStatesEntity>) atmUtilityRequest.getAtmStatesRepository().findAll();
+		atmStatesEntities=atmUtilityRequest.getAtmStatesRepository().findAll();
 		if(CollectionUtils.isNotEmpty(atmStatesEntities)) {
 			atmStatesEntities.forEach(atmStates->{
 				atmRequest.getDenomination().forEach((denomination,count)->{
@@ -194,7 +194,7 @@ public class ATMUtility {
 		List<ATMStatesEntity> atmStatesEntities=null;
 		Map<String,Integer> countMap=null;
 		ATMRequest atmRequest=atmUtilityRequest.getAtmRequest();
-		atmStatesEntities=(List<ATMStatesEntity>) atmUtilityRequest.getAtmStatesRepository().findAll();
+		atmStatesEntities=atmUtilityRequest.getAtmStatesRepository().findAll();
 		Optional<AccountDetailsEntity>accountDetailEntityOptional=atmUtilityRequest.getAccountDetailsRepository().findById(atmRequest.getCustomerId());
 		if(CollectionUtils.isNotEmpty(atmStatesEntities) && accountDetailEntityOptional.isPresent()) {
 			countMap=updateDenominationCount(atmStatesEntities, atmRequest.getAmount(), atmUtilityRequest.getAtmStatesRepository());
