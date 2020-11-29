@@ -24,7 +24,7 @@ These additional references should also help you:
 
 ####################### #######################################################################  
 #DataBase Details  
- I have used in-memmory H2 database ".sql" file placed in /resources folder. There is two files on the same location one file contains table create query and other one contains insert query.  
+ I have used in-memmory H2 database ".sql" file placed in /resources folder. There are two files on the same location one file contains table create query and other one contains insert query.  
  File names :  
  1: schema.sql  
  2: data.sql  
@@ -39,7 +39,7 @@ These additional references should also help you:
 
 You can refer all api's from swagger too.
 
-We have Implement the API’s for the following functionalities - 
+I have Implemented the API’s for the following functionalities - 
 
 #1. Create accounts:
 To Create new Account. 
@@ -92,7 +92,7 @@ To deposit money into account.
 	
 #3. cash withdrawals:  
 To cash withdrawls from ATM.  
-#Amount will be accepted in multiplication of 100 only. And max cash transacation limit is >10000  
+#Amount will be accepted in multiplication of 100 only. And max cash transacation limit is <=10000  
 
 # Request Method And URL:
     [POST] http://localhost:8762/atm/api/withdrawals
