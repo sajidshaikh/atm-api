@@ -24,15 +24,15 @@ These additional references should also help you:
 
 ####################### #######################################################################  
 #DataBase Details
- I have used in-memmory H2 database ".sql" file placed in /resources folder. There is two files on the same location one file contains table create query and other one contains insert query.
- File names :
- 1: schema.sql
- 2: data.sql
+ I have used in-memmory H2 database ".sql" file placed in /resources folder. There is two files on the same location one file contains table create query and other one contains insert query.  
+ File names :  
+ 1: schema.sql  
+ 2: data.sql  
  
-#Denominations:
-100,500,2000
+#Denominations:  
+100,500,2000  
 
-#ATM API details:
+#ATM API details:  
 
 #1.Swagger UI URL: 
 [Click to show Swagger UI](http://localhost:8762/swagger-ui.html#)
