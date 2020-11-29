@@ -23,7 +23,7 @@ These additional references should also help you:
 
 
 ####################### #######################################################################  
-#DataBase Details
+#DataBase Details  
  I have used in-memmory H2 database ".sql" file placed in /resources folder. There is two files on the same location one file contains table create query and other one contains insert query.  
  File names :  
  1: schema.sql  
