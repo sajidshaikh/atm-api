@@ -39,18 +39,18 @@ public class ATMUtility {
 	public static AccountDetailsEntity generateCreateAccountRequest(ATMUtilityRequest atmUtilityRequest)throws Exception {
 		AccountDetailsEntity accountDetailsEntity=new AccountDetailsEntity();
 		ATMRequest atmRequest=atmUtilityRequest.getAtmRequest();
-		if(StringUtils.isNoneBlank(atmRequest.getCustomerName())) {
+		if(StringUtils.isNotBlank(atmRequest.getCustomerName())) {
 			accountDetailsEntity.setCustomerName(atmRequest.getCustomerName());
-		}if(StringUtils.isNoneBlank(atmRequest.getEmail())) {
+		}if(StringUtils.isNotBlank(atmRequest.getEmail())) {
 			accountDetailsEntity.setEmail(atmRequest.getEmail());
 		}if(Optional.ofNullable(atmRequest.getAmount()).orElse(0D)!=0D) {
 			accountDetailsEntity.setAmount(atmRequest.getAmount());
-		}if(StringUtils.isNoneBlank(atmRequest.getAccountType())) {
+		}if(StringUtils.isNotBlank(atmRequest.getAccountType())) {
 			Map<String,AccountTypeEntity> accountTypesMap=getAccountTypeEntitiesMap(atmUtilityRequest.getAccountTypeRepository());
 			if(accountTypesMap.containsKey(atmRequest.getAccountType())) {
 				accountDetailsEntity.setAccountTypeById(accountTypesMap.get(atmRequest.getAccountType()));
 			}
-		}if(StringUtils.isNoneBlank(atmRequest.getPin())) {
+		}if(StringUtils.isNotBlank(atmRequest.getPin())) {
 			accountDetailsEntity.setCustomerPin(atmRequest.getPin());
 		}
 		accountDetailsEntity.setIsActive(Boolean.TRUE);

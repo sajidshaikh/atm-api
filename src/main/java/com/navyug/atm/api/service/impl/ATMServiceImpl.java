@@ -93,7 +93,7 @@ public class ATMServiceImpl implements IATMService{
 		if(Optional.ofNullable(atmRequest).isPresent() && 
 				Optional.ofNullable(atmRequest.getCustomerId()).orElse(0L)!=0L
 				&& Optional.ofNullable(atmRequest.getAmount()).orElse(0D)!=0D
-				&& StringUtils.isNoneBlank(atmRequest.getPin())) {
+				&& StringUtils.isNotBlank(atmRequest.getPin())) {
 			if(ATMUtility.isValidAmount(atmRequest.getAmount())) {
 				if(ATMUtility.isSufficientAmountAvailableInAtm(atmStatesRepository, atmRequest.getAmount())) {
 					if(atmRequest.getAmount().intValue()>=10000){
@@ -162,8 +162,8 @@ public class ATMServiceImpl implements IATMService{
 	@Transactional
 	public ATMResponse createAccount(ATMRequest atmRequest) throws Exception {
 		ATMResponse response=null;
-		if(Optional.ofNullable(atmRequest).isPresent() && StringUtils.isNoneBlank(atmRequest.getCustomerName())
-				&& StringUtils.isNoneBlank(atmRequest.getEmail())) {
+		if(Optional.ofNullable(atmRequest).isPresent() && StringUtils.isNotBlank(atmRequest.getCustomerName())
+				&& StringUtils.isNotBlank(atmRequest.getEmail())) {
 				ATMUtilityRequest atmUtilityRequest=new ATMUtilityRequest();
 				atmUtilityRequest.setAtmRequest(atmRequest);
 				atmUtilityRequest.setAccountTypeRepository(accountTypeRepository);
