@@ -25,10 +25,18 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
     //runtimeOnly 'mysql:mysql-connector-java'
     //runtimeOnly('mysql:mysql-connector-java')
-    implementation "io.springfox:springfox-boot-starter:3.0.0"
-    implementation "io.springfox:springfox-swagger-ui:2.9.2"
-    implementation  'org.apache.commons:commons-lang3'
-	implementation  'org.apache.commons:commons-collections4'
+    // https://mvnrepository.com/artifact/io.springfox/springfox-boot-starter
+implementation group: 'io.springfox', name: 'springfox-boot-starter', version: '3.0.0'
+
+ // https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui
+implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
+
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
+
+// https://mvnrepository.com/artifact/org.apache.commons/commons-collections4
+implementation group: 'org.apache.commons', name: 'commons-collections4', version: '4.4'
+
 	
    testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
